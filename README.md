@@ -1,1 +1,2 @@
->>Introduction into C -- C is fun
+# Learning C language and how the
+# compiler functions
