@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Just adding stuff after the fifth time and the checker not seeing my files
+
 =======
 # holbertonschool-low_level_programming
 Introduction into the 'Cisfun' programming language.
