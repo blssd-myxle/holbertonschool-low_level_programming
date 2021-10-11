@@ -1,29 +1,34 @@
 #include "holberton.h"
-#include <string.h>
 /**
 * cap_string - Capitalize the words of a string
-* @jedi: pointer to string
-* Return: jedi
+* @tardis: pointer to string
+* Return: tardis
 */
-char *cap_string(char *jedi)
+char *cap_string(char *tardis)
 {
-	int m;
-	char *saber = "\n\t ,.?(){}";
-	char yoda[2];
-	int sith;
+	int doctor, master;
+	char sep[] = " \t\n,;.!?\"(){}";
 
-	for (m = 0; jedi[m]; m++)
+	doctor = 0;
+	while (tardis[doctor] != '\0')
 	{
-		if (sith == 0)
+		if (tardis[doctor] >= 97 && tardis[doctor] <= 122)
 		{
-			if ((jedi[m] >= 97 && jedi[m] <= 122))
-				jedi[m] = jedi[m] - 32;
-			sith = 1;
+			if (doctor == 0)
+			{
+				tardis[doctor] -= 32;
+			}
+			else
+			{
+				for (master = 0; master < 14; master++)
+				{
+					if (tardis[doctor - 1] == sep[master])
+						tardis[doctor] -= 32;
+				}
+			}
 		}
-		yoda[0] = jedi[m];
-		yoda[1] = 0;
-		if (strstr(saber, yoda) != 0)
-			sith = 0;
+		doctor++;
 	}
-		return (jedi);
+
+	return (tardis);
 }
