@@ -8,8 +8,7 @@
 **/
 char *_strncpy(char *dest, char *src, int n)
 {
-    int m = 0;
-
+	int m = 0;
 
 	while (m < n && src[m])
 	{
