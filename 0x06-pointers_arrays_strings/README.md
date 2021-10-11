@@ -1,0 +1,3 @@
+# Doing more pointers, arrays and strings...
+# int _putchar, char *_strcat, char *_strncat, char *_strncpy, int _strcmp
+# and others
