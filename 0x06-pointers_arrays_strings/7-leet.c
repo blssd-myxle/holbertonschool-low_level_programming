@@ -8,7 +8,7 @@ char *leet(char *chichi)
 {
 	int goku, trunks, vegeta;
 
-	char leet[] = {'4', '3', '0', '7', '1'};
+	char vidal[] = {'4', '3', '0', '7', '1'};
 	char bulma[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
 	for (goku = 0; chichi[goku] != '\0'; goku++)
@@ -18,7 +18,7 @@ char *leet(char *chichi)
 		{
 			if (chichi[goku] == bulma[vegeta] || chichi[goku] == bulma[vegeta + 1])
 			{
-				chichi[goku] = leet[trunks];
+				chichi[goku] = vidal[trunks];
 			}
 			vegeta += 2;
 		}
