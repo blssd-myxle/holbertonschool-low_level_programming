@@ -1,5 +1,8 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#include <stdio.h>
+#include <stdlib.h>
 
 int _putchar(char c);
 int _isupper(int c);
@@ -50,4 +53,4 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 
-#endif /* _HOLBERTON_H_ */
+#endif /* _MAIN_H_ */
