@@ -1,64 +1,70 @@
 #include "dog.h"
 #include <stdlib.h>
-char *_strdup(char *str);
+#include <stdio.h>
 /**
- * new_dog - creates a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: name of dog's owner
+ * _strdup - returns a pointer to a newly allocated space in memory
+ * @src: string to be allocated
  *
- * Return: Pointer to the newly created struct
+ *Return: 0
  */
-
-dog_t *new_dog(char *name, float age, char *owner)
+char *_strdup(char *src)
 {
-	dog_t *new;
+	char *str;
+	char *p;
+	int len = 0;
 
-	new = malloc(sizeof(dog_t));
-	if (new == NULL)
+	if (src == NULL)
 		return (NULL);
-
-	new->name = _strdup(name);
-	if (new->name == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->owner = _strdup(owner);
-	if (new->owner == NULL)
-	{
-		free(new->name);
-		free(new);
-		return (NULL);
-	}
-	new->age = age;
-
-	return (new);
-}
-
-/**
- * _strdup - copies string to allocated memory
- * @str: pointer to a string
- *
- * Return: pointer to copied string, NULL if str is NULL or malloc error
- */
-
-char *_strdup(char *str)
-{
-	int size, i;
-	char *ptr;
-
+	while (src[len])
+		++len;
+	str = malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
-	for (size = 0; str[size] != 0; size++)
-	{}
-	size++;
-	ptr = malloc(sizeof(char) * (size));
-	if (ptr == NULL)
-		return (NULL);
-	for (i = 0; i < size; i++)
+	p = str;
+	while (*src)
 	{
-		ptr[i] = str[i];
+		*p = *src;
+		++p;
+		++src;
 	}
-	return (ptr);
+	*p = '\0';
+	return (str);
+}
+/**
+ * *new_dog - init dog_t
+ *@name: name char
+ *@age: age float
+ *@owner: owner char
+ *
+ *Return: NULL if fails and ptr if true
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	struct dog *newdog;
+
+	newdog = malloc(sizeof(dog_t));
+
+	if (newdog)
+	{
+		newdog->name = _strdup(name);
+		if (newdog->name == NULL)
+		{
+			free(newdog->name);
+			free(newdog);
+			return (NULL);
+		}
+		newdog->owner = _strdup(owner);
+
+		if (newdog->owner == NULL)
+		{
+			free(newdog->owner);
+			free(newdog->name);
+			free(newdog);
+			return (NULL);
+		}
+		newdog->age = age;
+	}
+	else
+		free(newdog);
+	return (newdog);
 }
