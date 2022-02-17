@@ -2,7 +2,7 @@
 /**
 * _strncat - combines two strings
 * @dest: string that is appended
-* @src: the appending string
+* @src: the appended string
 * @n: src int
 * Return: dest
 **/
