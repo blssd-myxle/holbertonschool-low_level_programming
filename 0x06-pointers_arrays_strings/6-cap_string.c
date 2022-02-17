@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* cap_string - Capitalize the words of a string
+* cap_string - Capitalize the words of string
 * @tardis: pointer to string
 * Return: tardis
 */
