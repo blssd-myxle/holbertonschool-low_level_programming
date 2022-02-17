@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* leet - change a string into 1337
+* leet - change string into 1337
 * @chichi: pointer
 * Return: chichi
 */
