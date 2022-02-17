@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* reverse_array - reverses the content of an array
+* reverse_array - reverses content of an array
 * @a: pointer to array
 * @n: length of array
 * Return: nothing
