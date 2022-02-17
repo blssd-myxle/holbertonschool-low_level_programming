@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* string_toupper - changes lower case to upper
+* string_toupper - changes lower case to upper case
 * @m: pointer to string
 * Return: m
 **/
