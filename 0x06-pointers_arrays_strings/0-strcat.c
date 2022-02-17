@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* _strcat - combines two strings
+* _strcat - combines 2 strings
 * @dest: string appended by source
 * @src: string that is appended by dest
 * Return: dest
