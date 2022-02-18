@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr - locates a char in string
+ * _strchr - locates char in string
  *@s: pointer to the memory area to be filled
  *@c: the char to fill the memory
  *Return: s
