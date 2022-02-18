@@ -8,27 +8,23 @@
  *
  * @accept: string
  */
- 
-char *_strpbrk(char *s, char *accept)
-{
-	char *str = NULL;
 
-	if (s == NULL || accept == NULL)
-	{
-		return (NULL);
-	}
-	while (*s != '\0')
-	{
-		str = accept;
-		while (*str != '\0')
-		{
-			if (*s == *str)
-			{
-				return (s);
-			}
-			str++;
-		}
-		s++;
-	}
-	return (NULL);
+ int main()
+ {
+ char *_strpbrk(char *s, char *accept)
+ {
+ 	int i;
+
+ 	for (; *s != '\0'; s++)
+ 	{
+ 		for (i = 0; accept[i] != '\0'; i++)
+ 		{
+ 			if (*s == accept[i])
+ 				return (s);
+ 		}
+ 	}
+
+ 	return (0);
+ }
+	return (0)
 }
