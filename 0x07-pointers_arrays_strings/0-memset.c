@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _memset - fills the first n bytes of memory
+* _memset - fills first n bytes of memory
 * @s: pointer to the first memory location
 * @b: character to fill memory
 * @n: number of bytes to fills
