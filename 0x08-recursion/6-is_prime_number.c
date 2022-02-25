@@ -1,32 +1,37 @@
 #include "main.h"
+
 /**
- * is_prime_number - tells if number is prime or not
- * @num: the number to test
- * Return: 1 if num is prime else 0
+ * _prime - finds prime numbers
+ * @n: number being found
+ * @p: number being checked
+ *
+ * Return: 1 if prime 0 if not
  */
-int is_prime_number(int num)
+
+int _prime(int n, int p)
 {
-	if (num <= 1)
-		return (0);
-	if (num > 1 && num < 4)
+	if (p == n)
 		return (1);
-	if (num % 2 == 0)
+	else if (n % p == 0)
 		return (0);
-	else
-		return (is_prime_hlpr(num, 3));
+
+	return (_prime(n, p + 2));
 }
+
 /**
- * is_prime_hlpr - recursively tells if num is prime
- * @num: the number to test
- * @fact: next factor to check
- * Return: 1 if num is prime else 0
+ * is_prime_number - determines if a number is prime
+ * @n: number to be checked
+ *
+ * Return: 1 if prime 0 if not
  */
-int is_prime_hlpr(int num, int fact)
+
+int is_prime_number(int n)
 {
-	if (fact >= num)
-		return (1);
-	else if (num % fact == 0)
+	if (n <= 1)
 		return (0);
-	else
-		return (is_prime_hlpr(num, fact + 2));
+	if (n != 2 && n % 2 == 0)
+		return (0);
+
+	return (_prime(n, 3));
+
 }
