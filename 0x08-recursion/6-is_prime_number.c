@@ -1,5 +1,5 @@
 #include "main.h"
-int is_prime_hlpr(int, int);
+
 /**
  * is_prime_number - tells if number is prime or not
  * @num: the number to test
