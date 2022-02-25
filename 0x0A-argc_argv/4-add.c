@@ -1,14 +1,15 @@
 #include "main.h"
- #include <stdio.h>
- #include <stdlib.h>
- #include <ctype.h>
- /**
-  * main - add agrs on command line
-  *@argc: argument count
-  *@argv: agurment array vector
-  *
-  *Return: 0
-  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+/**
+* main - add agrs on command line
+*@argc: argument count
+*@argv: agurment array vector
+*
+*Return: 0
+*/
+
 int main(int argc, char *argv[])
 {
 	int a, b, sum = 0;
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 		{
 			if (!isdigit(argv[a][b]))
 			{
-					printf("Error\n");
+				printf("Error\n");
 				return (1);
 			}
 		}
